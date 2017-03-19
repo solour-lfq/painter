@@ -1,0 +1,16 @@
+opencv函数绘图工具
+
+整体的图片尺寸在全局变量HEIGHT,WIDTH中设置。
+
+函数：
+draw_line(Mat, Point, Point, Scalar, int)
+【目标图像，终末点，颜色，宽度】
+draw_point(Mat, Point, Scalar, int)
+【目标图像，点坐标，颜色，宽度】
+draw_segment(Mat, Point, Point, Scalar, int, int)
+【目标图像，终末点，颜色，线宽度，点宽度】
+draw_arrow(Mat, Point, Point, Scalar, int, int, int, int)
+【目标图像，终末点，颜色，箭头长度，偏转角度，宽度，模式】
+make_XY_coordinate(src, float, float, float, float)【目标图像，端点比例】
+
+
