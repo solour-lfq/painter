@@ -87,13 +87,13 @@ void XY_display(Mat src, const Scalar& color, float (*f)(float), const Scalar& c
 		y = f(x);
 		rx = o.x + (oy.x - o.x) * (x - init_x) / (end_x - init_x);
 		ry = o.y - (o.y - ox.y) * (y - init_y) / (end_y - init_y);
-		if (seg)
+		if (!seg)
 		{
-			draw_segment(src, Point(rx_, ry_), Point(rx, ry), color2, 5, 15);		
+			draw_line(src, Point(rx_, ry_), Point(rx, ry), color2, 5);		
 		}
 		else
 		{
-			draw_line(src, Point(rx_, ry_), Point(rx, ry), color2, 5);
+			draw_point(src, Point(rx, ry), color2, 8);
 		}
 		x += delta;
 	}	
